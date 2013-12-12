@@ -133,6 +133,21 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // ens_jobeet_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_ens_jobeet_homepage;
+            }
+
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'ens_jobeet_homepage');
+            }
+
+            return array (  '_controller' => 'EnsJobeetBundle:Pages:index',  '_route' => 'ens_jobeet_homepage',);
+        }
+        not_ens_jobeet_homepage:
+
         // _welcome
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
