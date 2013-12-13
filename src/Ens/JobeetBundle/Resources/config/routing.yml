@@ -3,3 +3,13 @@ ens_jobeet_homepage:
     defaults: { _controller: EnsJobeetBundle:Pages:index }
     requirements:
         _method: GET
+ens_jobeet_about:
+    pattern:  /about
+    defaults: { _controller: EnsJobeetBundle:Pages:about }
+    requirements:
+        _method: GET
+ens_jobeet_contact:
+    pattern:  /contact
+    defaults: { _controller: EnsJobeetBundle:Pages:contact }
+    requirements:
+        method: POST

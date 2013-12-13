@@ -25,6 +25,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $allow = array();
         $pathinfo = rawurldecode($pathinfo);
 
+        if (0 === strpos($pathinfo, '/css/1590bb4')) {
+            // _assetic_1590bb4
+            if ($pathinfo === '/css/1590bb4.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '1590bb4',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_1590bb4',);
+            }
+
+            // _assetic_1590bb4_0
+            if ($pathinfo === '/css/1590bb4_part_1_contact_1.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '1590bb4',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_1590bb4_0',);
+            }
+
+        }
+
         if (0 === strpos($pathinfo, '/_')) {
             // _wdt
             if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
@@ -144,9 +157,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'ens_jobeet_homepage');
             }
 
-            return array (  '_controller' => 'EnsJobeetBundle:Pages:index',  '_route' => 'ens_jobeet_homepage',);
+            return array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\PagesController::indexAction',  '_route' => 'ens_jobeet_homepage',);
         }
         not_ens_jobeet_homepage:
+
+        // ens_jobeet_about
+        if ($pathinfo === '/about') {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_ens_jobeet_about;
+            }
+
+            return array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\PagesController::aboutAction',  '_route' => 'ens_jobeet_about',);
+        }
+        not_ens_jobeet_about:
+
+        // ens_jobeet_contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\PagesController::contactAction',  '_route' => 'ens_jobeet_contact',);
+        }
 
         // _welcome
         if (rtrim($pathinfo, '/') === '') {

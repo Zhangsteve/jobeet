@@ -123,9 +123,18 @@ class __TwigTemplate_eab7505676321fcf809d4e95f2857404f91cea5f457d32a29fb9ceb6a70
         // line 23
         echo "                        <nav>
                             <ul class=\"navigation\">
-                                <li><a href=\"#\">Home</a></li>
-                                <li><a href=\"#\">About</a></li>
-                                <li><a href=\"#\">Contact</a></li>
+                                <li><a href=\"";
+        // line 25
+        echo $this->env->getExtension('routing')->getPath("ens_jobeet_homepage");
+        echo "\">Home</a></li>
+                                <li><a href=\"";
+        // line 26
+        echo $this->env->getExtension('routing')->getPath("ens_jobeet_about");
+        echo "\">About</a></li>
+                                <li><a href=\"";
+        // line 27
+        echo $this->env->getExtension('routing')->getPath("ens_jobeet_contact");
+        echo "\">Contact</a></li>
                             </ul>
                         </nav>
                     ";
@@ -178,6 +187,6 @@ class __TwigTemplate_eab7505676321fcf809d4e95f2857404f91cea5f457d32a29fb9ceb6a70
 
     public function getDebugInfo()
     {
-        return array (  165 => 53,  160 => 48,  157 => 47,  152 => 43,  147 => 40,  141 => 35,  135 => 34,  124 => 23,  121 => 22,  115 => 13,  111 => 11,  108 => 10,  102 => 6,  96 => 54,  94 => 53,  89 => 50,  87 => 47,  82 => 44,  80 => 43,  76 => 41,  74 => 40,  66 => 35,  62 => 34,  57 => 31,  55 => 22,  44 => 15,  42 => 10,  35 => 6,  31 => 5,  28 => 1,);
+        return array (  174 => 53,  169 => 48,  166 => 47,  161 => 43,  156 => 40,  150 => 35,  144 => 34,  136 => 27,  132 => 26,  128 => 25,  124 => 23,  121 => 22,  115 => 13,  111 => 11,  108 => 10,  102 => 6,  96 => 54,  89 => 50,  87 => 47,  82 => 44,  80 => 43,  76 => 41,  74 => 40,  66 => 35,  62 => 34,  57 => 31,  55 => 22,  44 => 15,  35 => 6,  31 => 5,  28 => 1,  103 => 28,  98 => 26,  94 => 53,  90 => 24,  86 => 23,  81 => 21,  75 => 20,  67 => 14,  64 => 13,  58 => 11,  42 => 10,  38 => 6,  33 => 5,  30 => 4,);
     }
 }
