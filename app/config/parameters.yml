@@ -10,7 +10,7 @@ parameters:
     mailer_auth_mode="login"
     mailer_host="smtp.gmail.com"
     mailer_user="xxxxx"
-    mailer_password="cccccc"
+    mailer_password="aaaaa"
     locale: en
     secret: 6812dbce46c3c0c4fbe6422bcafa72b3979880f7
     database_path: null
