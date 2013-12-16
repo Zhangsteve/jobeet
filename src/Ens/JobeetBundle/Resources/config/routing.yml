@@ -13,3 +13,9 @@ ens_jobeet_contact:
     defaults: { _controller: EnsJobeetBundle:Pages:contact }
     requirements:
         method: POST
+ens_jobeet_blog_show:
+    pattern:  /{id}
+    defaults: { _controller: EnsJobeetBundle:Blog:show }
+    requirements:
+        _method:  GET
+        id: \d+

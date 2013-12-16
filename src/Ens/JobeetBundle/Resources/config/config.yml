@@ -1,0 +1,3 @@
+parameters:
+    # Jobeet contact email address
+    jobeet.emails.contact_email: contact@email.com

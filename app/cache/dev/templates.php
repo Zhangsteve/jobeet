@@ -80,6 +80,7 @@
   'EnsJobeetBundle::layout.html.twig' => 'C:\\tools\\wamp\\www\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/layout.html.twig',
   'EnsJobeetBundle:Pages:about.html.twig' => 'C:\\tools\\wamp\\www\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Pages/about.html.twig',
   'EnsJobeetBundle:Pages:contact.html.twig' => 'C:\\tools\\wamp\\www\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Pages/contact.html.twig',
+  'EnsJobeetBundle:Pages:contactEmail.txt.twig' => 'C:\\tools\\wamp\\www\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Pages/contactEmail.txt.twig',
   'EnsJobeetBundle:Pages:index.html.twig' => 'C:\\tools\\wamp\\www\\jobeet\\src\\Ens\\JobeetBundle/Resources/views/Pages/index.html.twig',
   'AcmeDemoBundle:Demo:contact.html.twig' => 'C:\\tools\\wamp\\www\\jobeet\\src\\Acme\\DemoBundle/Resources/views/Demo/contact.html.twig',
   'AcmeDemoBundle:Demo:hello.html.twig' => 'C:\\tools\\wamp\\www\\jobeet\\src\\Acme\\DemoBundle/Resources/views/Demo/hello.html.twig',

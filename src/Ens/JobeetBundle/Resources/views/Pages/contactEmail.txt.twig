@@ -1,0 +1,24 @@
+{# src/Ens/JobeetBundle/Resources/views/Pages/contact.html.twig #}
+
+{# rest of template ... #}
+<header>
+    <h1>Contact symblog</h1>
+</header>
+
+{% for flashMessage in app.session.flashbag.get('Jobeet-notice') %}
+    <div class="jobeet-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+
+<p>Want to contact symblog?</p>
+
+{# rest of template ... #}
+
+{# src/Ens/JobeetBundle/Resources/views/Pages/contactEmail.txt.twig #}
+A contact enquiry was made by {{ enquiry.name }} at {{ "now" | date("Y-m-d H:i") }}.
+
+Reply-To: {{ enquiry.email }}
+Subject: {{ enquiry.subject }}
+Body:
+{{ enquiry.body }}
