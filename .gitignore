@@ -213,3 +213,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+# Configuration files
+app/config/parameters.ini
+app/config/parameters.yml
